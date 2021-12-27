@@ -1,0 +1,36 @@
+.Accordion{
+    margin-top: 10px;
+}
+
+.Accordion .MuiPaper-root{
+    box-shadow: unset;
+}
+
+.css-yw020d-MuiAccordionSummary-expandIconWrapper.Mui-expanded{
+    color: #3c228a;
+}
+
+.accHeader{
+    font-size: 20px !important;
+}
+
+.accSubHeader{
+    display: flex;
+    justify-content:space-between;
+    font-size: 18px;
+}
+
+.accSubHeader .accEdit button{
+    color: #3c228a;
+    font-size: 18px; 
+    cursor: pointer;
+    background: transparent;
+    border: unset;
+}
+
+.accDetail{
+    font-size: 16px;
+    color: rgb(124, 122, 122);
+    line-height: 30px;
+    
+}
