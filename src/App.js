@@ -1,45 +1,96 @@
 import './App.css';
 import Accordions from './Components/Accordion/Accordions.js';
-//import AccDetail from './Components/Accordion/AccDetail.js';
+import Category from './Components/Category/Category.js';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 function App() {
     const channelPerformance = [
         {
             title: 'Insight Metrics',
-            detail1: 'Store ',
-            detail2: 'Inventory '
+            details: [
+                {
+                    'id': 1,
+                    'name':'Store'
+                },
+                {
+                    'id': 2,
+                    'name':'inventorey'
+                },
+            ],
+           
         },
         {
             title: 'Category Preferences',
-            detail1: 'Category 1; ',
-            detail2: 'Category 2; ',
-            detail3: 'Category 3; ',
+            details: [
+                {
+                    'id': 1,
+                    'name':'Category 1'
+                },
+                {
+                    'id': 2,
+                    'name':'Category 2'
+                },
+                {
+                    'id': 3,
+                    'name':'Category 3'
+                }
+            ]
         },
     ];
 
     const customerPreception = [
         {
             title: 'Insight Metrics',
-            detail1: 'Store ',
-            detail2: 'Inventory '
+            details: [
+                {
+                    'id': 1,
+                    'name':'Store'
+                },
+                {
+                    'id': 2,
+                    'name':'inventorey'
+                },
+            ],
+           
         },
         {
             title: 'Category Preferences',
-            detail1: 'Category 1; ',
-            detail2: 'Category 2; ',
-            detail3: 'Category 3; ',
+            details: [
+                {
+                    'id': 1,
+                    'name':'Category 1'
+                },
+                {
+                    'id': 2,
+                    'name':'Category 2'
+                },
+                {
+                    'id': 3,
+                    'name':'Category 3'
+                }
+                
+            ]
         },
     ];
 
     return ( 
-        <div className = "App" >
-            <Accordions AccordionHeader="Channel Performance" accordionDetail={channelPerformance} />
-            <Accordions AccordionHeader="Customer Preception" accordionDetail={customerPreception} />
-            <Accordions AccordionHeader="Shop Behaviour" accordionDetail={customerPreception} />
-            <Accordions AccordionHeader="Personal Information" accordionDetail={customerPreception} />
+        <Router>
+            <div className = "App" >
+                <Switch>
+                    <Route exact path = "/">
+                        <Accordions AccordionHeader="Channel Performance" accordionDetail={channelPerformance} />
+                        <Accordions AccordionHeader="Customer Preception" accordionDetail={customerPreception} />
+                        <Accordions AccordionHeader="Shop Behaviour" accordionDetail={customerPreception} />
+                        <Accordions AccordionHeader="Personal Information" accordionDetail={customerPreception} />
+                    </Route>
+                    <Route exact path="/category">
+                        <Category/>
+                    </Route>
+                </Switch>
+                
 
-
-        </div>
+            </div>
+        </Router>
     );
 }
 

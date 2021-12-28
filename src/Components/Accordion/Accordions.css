@@ -28,9 +28,40 @@
     border: unset;
 }
 
-.accDetail{
+.accDetail a{
     font-size: 16px;
     color: rgb(124, 122, 122);
     line-height: 30px;
+    text-decoration: none;
     
+}
+
+.accDetail .checkbox button{
+    width: fit-content;
+    border-radius: 15px;
+    color: white;
+    background-color: #3c228a;
+}
+
+.css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked{
+    color: #3c228a !important;
+}
+
+.accDetail .checkbox .MuiFormGroup-root{
+    padding: 0px 10px;
+}
+
+.accDetail .checkbox .MuiFormGroup-root label{
+    padding: 5px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.everyDetail{
+    display: flex;
+}
+
+.everyDetail div{
+    margin-right: 5px;
 }

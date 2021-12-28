@@ -15,9 +15,10 @@ const Accordions = ({ AccordionHeader, accordionDetail }) => {
         return <AccDetail
         key = {key}
         AccordionSubHeader={item.title} 
-        AccordionDetail1={item.detail1}
-        AccordionDetail2={item.detail2}
-        AccordionDetail3={item.detail3}
+        // AccordionDetail1={item.details[0]}
+        // AccordionDetail2={item.details[1]}
+        // AccordionDetail3={item.details[2]}
+        details = {item.details}
          />
     })
 
